@@ -1,5 +1,19 @@
 #!/bin/bash
 
+echo "INICIO INSTALANDO NODE E YARN"
+export PATH=$PATH:/opt/app-root/node_modules/.bin
+
+cd ..
+npm install yarn
+cd src
+
+node -v
+npm -v
+yarn -v
+
+
+echo "FIM INSTALANDO NODE E YARN"
+
 ASSEMBLE_SCRIPT="/usr/libexec/s2i/assemble"
 
 pushd /tmp/src || exit 1
